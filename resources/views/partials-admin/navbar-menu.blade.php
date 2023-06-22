@@ -388,7 +388,7 @@
             <li class="nav-item">
                 <a class="nav-link menu-link" href="#sidebarMultilevel" data-bs-toggle="collapse"
                     role="button" aria-expanded="false" aria-controls="sidebarMultilevel">
-                    <i class="bi bi-share"></i> <span data-key="t-multi-level">Paramètres</span>
+                    <i class="mdi mdi-spin mdi-cog-outline fs-22"></i> <span data-key="t-multi-level">Paramètres</span>
                 </a>
                 {{-- <div class="collapse menu-dropdown" id="sidebarMultilevel">
                     <ul class="nav nav-sm flex-column">

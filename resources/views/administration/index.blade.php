@@ -116,9 +116,9 @@
     </div>
 
     <!-- Theme Settings -->
-    <div class="offcanvas offcanvas-end border-0" tabindex="-1" id="theme-settings-offcanvas">
+    {{-- <div class="offcanvas offcanvas-end border-0" tabindex="-1" id="theme-settings-offcanvas">
         @include('partials-admin.themes')
-    </div>
+    </div> --}}
 
     <!-- JAVASCRIPT -->
     <script src="{{ asset('asset-backend-admin/assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>

@@ -1748,11 +1748,11 @@
 </div>
 <!-- End Page-content -->
 
-<div>
+{{-- <div>
     <button type="button"
         class="btn-success btn-rounded shadow-lg btn btn-icon layout-rightside-btn fs-22"><i
             class="ri-chat-smile-2-line"></i></button>
-</div>
+</div> --}}
 
 <footer class="footer">
     @include('partials-admin.footer')

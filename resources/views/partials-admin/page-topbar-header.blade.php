@@ -507,42 +507,29 @@
                         <img class="rounded-circle header-profile-user"
                             src="assets/images/users/avatar-1.jpg" alt="Header Avatar">
                         <span class="text-start ms-xl-2">
-                            <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">Edward
-                                Diana</span>
-                            <span
-                                class="d-none d-xl-block ms-1 fs-13 text-reset user-name-sub-text">Founder</span>
+                            <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">
+                                {{ Auth::user()->name }}
+                            </span>
                         </span>
                     </span>
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                     <!-- item-->
-                    <h6 class="dropdown-header">Welcome Diana!</h6>
-                    <a class="dropdown-item" href="pages-profile.html"><i
+                    <h6 class="dropdown-header">Bienvenue {{ Auth::user()->name }}!</h6>
+                    <a class="dropdown-item" href="{{ route('profile.edit') }}"><i
                             class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span
-                            class="align-middle">Profile</span></a>
-                    <a class="dropdown-item" href="#!"><i
-                            class="mdi mdi-message-text-outline text-muted fs-16 align-middle me-1"></i>
-                        <span class="align-middle">Messages</span></a>
-                    <a class="dropdown-item" href="#!"><i
-                            class="mdi mdi-calendar-check-outline text-muted fs-16 align-middle me-1"></i>
-                        <span class="align-middle">Taskboard</span></a>
-                    <a class="dropdown-item" href="pages-faqs.html"><i
-                            class="mdi mdi-lifebuoy text-muted fs-16 align-middle me-1"></i> <span
-                            class="align-middle">Help</span></a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="pages-profile.html"><i
-                            class="mdi mdi-wallet text-muted fs-16 align-middle me-1"></i> <span
-                            class="align-middle">Balance : <b>$8451.36</b></span></a>
-                    <a class="dropdown-item" href="pages-profile-settings.html"><span
-                            class="badge bg-success-subtle text-success mt-1 float-end">New</span><i
-                            class="mdi mdi-cog-outline text-muted fs-16 align-middle me-1"></i> <span
-                            class="align-middle">Settings</span></a>
-                    <a class="dropdown-item" href="auth-lockscreen-basic.html"><i
-                            class="mdi mdi-lock text-muted fs-16 align-middle me-1"></i> <span
-                            class="align-middle">Lock screen</span></a>
-                    <a class="dropdown-item" href="auth-logout-basic.html"><i
-                            class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> <span
-                            class="align-middle" data-key="t-logout">Logout</span></a>
+                            class="align-middle">Profil</span>
+                    </a>
+
+                    <form method="POST" action="{{ route('logout') }}" >
+                        @csrf
+                        <a class="dropdown-item" href="route('logout')" 
+                            onclick="event.preventDefault(); this.closest('form').submit();">
+                            <i class="mdi mdi-logout text-muted fs-16 align-middle me-1">
+                            </i>
+                            <span class="align-middle" data-key="t-logout">Se déconnecter</span>
+                        </a>
+                    </form>
                 </div>
             </div>
         </div>
